@@ -3,82 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinations - TravelNest</title>
+    <title>Budget Planner - TravelNest</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    css/style.css
 
-    <!-- FAVICON -->
-    <link rel="icon" href="images/icon.png">
+    <!-- Favicon -->
+    images/icon.png
 
-    <!-- MANIFEST -->
-    <link rel="manifest" href="manifest.json">
+    <!-- Manifest -->
+    manifest.json
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
     <nav class="navbar">
         <div class="logo">TravelNest</div>
 
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destinations.html">Explore</a></li>
-            <li><a href="budget.html">Budget</a></li>
-            <li><a href="random.html">Random</a></li>
-            <li><a href="mood.html">Mood</a></li>
-            <li><a href="feedback.html">Contact</a></li>
+            <li>index.htmlHome</a></li>
+            <li>destinations.htmlExplore</a></li>
+            <li>budget.htmlBudget</a></li>
+            <li>random.htmlRandom</a></li>
+            <li>mood.htmlMood</a></li>
+            <li>feedback.htmlContact</a></li>
         </ul>
 
         <div class="hamburger">☰</div>
     </nav>
 </header>
 
+<!-- MAIN CONTENT -->
 <main>
 
-    <h1>Explore Destinations</h1>
-    <p>Browse and explore your dream destinations</p>
+    <h1>Trip Budget Planner</h1>
 
-    <!-- SEARCH + FILTER -->
-    <div class="controls">
-        <input type="text" id="search" placeholder="Search by destination name...">
-        
-        <select id="filter">
-            <option value="">All Continents</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-        </select>
-    </div>
+    <section class="budget-form">
 
-    <div class="progress">
-    <div id="progressBar" class="progress-bar"></div>
-    </div>
+        <label for="destinationInput">Destination</label>
+        <input type="text" id="destinationInput" placeholder="Enter destination">
 
-    <!-- DESTINATION CARDS -->
-    <div id="cardContainer"></div>
+        <label for="daysInput">Number of Days</label>
+        <input type="number" id="daysInput" min="1" placeholder="Enter number of days">
 
-    <!-- MODAL -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
+        <label for="budgetInput">Daily Budget ($)</label>
+        <input type="number" id="budgetInput" min="1" placeholder="Enter daily budget">
 
-            <span id="closeModal" aria-label="Close Modal" role="button">
-                &times;
-            </span>
+        <button onclick="calculateBudget()">Calculate</button>
 
-            <div id="modalDetails"></div>
+    </section>
 
-        </div>
-    </div>
+    <!-- RESULT -->
+    <div id="resultBox"></div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 TravelNest</p>
 </footer>
 
-<!-- JS -->
-<script src="data/destinations.js"></script>
-<script src="js/script.js"></script>
+<!-- JS FILES -->
+data/destinations.js
+js/script.jsscript>
 
 </body>
 </html>
