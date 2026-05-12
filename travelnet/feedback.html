@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - TravelNest</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/icon.png">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">TravelNest</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Explore</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="random.html">Random</a></li>
+            <li><a href="mood.html">Mood</a></li>
+            <li><a href="feedback.html">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">☰</div>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Feedback & Support</h1>
+
+    <!-- FORM -->
+    <form onsubmit="submitForm(event)">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" placeholder="Message"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="confirmMsg"></p>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(this)">How to use this site?</h3>
+            <p>This site helps you plan and explore trips.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleFAQ(this)">How to save trips?</h3>
+            <p>Use save buttons to store data in your browser.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 TravelNest</p>
+</footer>
+
+<!-- JS -->
+<script src="data/destinations.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

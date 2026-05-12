@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Mood - TravelNest</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/icon.png">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">TravelNest</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Explore</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="random.html">Random</a></li>
+            <li><a href="mood.html">Mood</a></li>
+            <li><a href="feedback.html">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">☰</div>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Travel Mood</h1>
+
+    <!-- SOUND CONTROLS -->
+    <section class="sounds">
+        <button onclick="playSound('beach')">🌊 Beach</button>
+        <button onclick="playSound('forest')">🌲 Forest</button>
+        <button onclick="playSound('city')">🏙 City</button>
+    </section>
+
+    <!-- AUDIO FILES -->
+    <audio id="beach" src="sounds/beach.mp3"></audio>
+    <audio id="forest" src="sounds/forest.mp3"></audio>
+    <audio id="city" src="sounds/city.mp3"></audio>
+
+    <!-- TRACK DESTINATIONS -->
+    <section class="tracker">
+        <h2>Track Your Trips</h2>
+
+        <input type="text" id="placeInput" placeholder="Enter destination">
+        <button onclick="addPlace()">Add</button>
+
+        <ul id="placeList"></ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 TravelNest</p>
+</footer>
+
+<!-- JS -->
+<script src="data/destinations.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
