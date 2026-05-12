@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>${d.country}</p>
             `;
 
-            card.onclick = () => openModal(d);
+            card.onclick = () => openModal(dest);
             container.appendChild(card);
         });
     }
@@ -186,7 +186,44 @@ function displayPlaces() {
     });
 }
 document.addEventListener("DOMContentLoaded", displayPlaces);
+function openModal(dest) {
 
+    const modal = document.getElementById("modal");
+    const modalDetails = document.getElementById("modalDetails");
+
+    modal.style.display = "block";
+
+    modalDetails.innerHTML = `
+        <h2>${dest.name}, ${dest.country}</h2>
+        <img src="${dest.image}" width="100%">
+        <p>${dest.description}</p>
+
+        <h4>Attractions:</h4>
+        <ul>
+            ${dest.attractions.map(a => `<li>${a}</li>`).join("")}
+        </ul>
+
+        <h4>Cost per day:</h4>
+        <p>Low: $${dest.cost.low}</p>
+        <p>Medium: $${dest.cost.medium}</p>
+        <p>High: $${dest.cost.high}</p>
+    `;
+}
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementById("closeModal");
+
+    if (closeBtn && modal) {
+        closeBtn.onclick = () => modal.style.display = "none";
+
+        window.onclick = (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    }
+});
 
 /* FEEDBACK */
 function submitForm(e) {
@@ -206,6 +243,8 @@ function submitForm(e) {
     localStorage.setItem("feedback", JSON.stringify(feedback));
 
     confirmMsg.textContent = "✅ Message sent!";
+    document.querySelector("form").reset();
+
 }
 
 function toggleFAQ(el) {

@@ -31,6 +31,12 @@
     color: #3498DB;
 }
 
+
+.nav-links a.active {
+    color: #3498DB;
+}
+
+
 /* GLOBAL */
 * {
     margin: 0;
@@ -59,6 +65,11 @@ main {
     padding: 40px;
     align-items: center;
     gap: 30px;
+}
+
+
+.hero {
+    animation: fadeIn 1s ease;
 }
 
 .hero img {
@@ -235,4 +246,35 @@ form input, form textarea {
 .faq-item p {
     display: none;
     padding: 10px;
+}
+
+#randomResult {
+    animation: fadeIn 0.5s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+.modal {
+    display: none;   /* ✅ IMPORTANT */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+#closeModal {
+    float: right;
+    cursor: pointer;
 }
