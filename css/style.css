@@ -120,6 +120,14 @@ main {
     background: #2980b9;
 }
 
+#destinationBox img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
 
 /* QUOTES */
 .quotes {

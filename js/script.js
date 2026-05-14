@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const d = getDestinationOfDay();
         box.innerHTML = `
             <h3>${d.name}</h3>
-            ${d.image}
+            <img src="${d.image}" alt="${d.name}">
             <p>${d.description}</p>
         `;
     }
@@ -52,6 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
     <h3>${d.name}</h3>
     <p>${d.country}</p>
 `;
+modalDetails.innerHTML = `
+    <h2>${dest.name}</h2>
+    <img src="${dest.image}" alt="${dest.name}">
+    <p>${dest.description}</p>
+`;
+
 
             card.onclick = () => openModal(dest);
             container.appendChild(card);
