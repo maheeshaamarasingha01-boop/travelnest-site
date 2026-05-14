@@ -1,26 +1,30 @@
-html, body {
-    height: 100%;
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #2c3e50;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
+
 main {
     flex: 1;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #2c3e50;
-    color: white;
-    margin-top: 20px;
-}
-
-/* NAVBAR FIX */
+/* ================= NAVBAR ================= */
 .navbar {
-    display: flex !important;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background: #2c3e50;
@@ -34,8 +38,8 @@ footer {
 }
 
 .nav-links {
-    display: flex !important;
     list-style: none;
+    display: flex;
 }
 
 .nav-links li {
@@ -43,59 +47,26 @@ footer {
 }
 
 .nav-links a {
-    color: white !important;
+    color: white;
     text-decoration: none;
 }
 
-.nav-links a:hover {
-    color: #3498DB;
-}
-
-
+.nav-links a:hover,
 .nav-links a.active {
     color: #3498DB;
 }
 
-
-/* GLOBAL */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+.hamburger {
+    display: none;
 }
 
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #2c3e50;
-}
-
-main {
-    max-width: 1200px;
-    margin: auto;
-}
-main {
-    padding: 20px;
-    background: #f0f4f8;
-    min-height: 80vh;
-}
-
-
-
-/* HERO */
+/* ================= HERO ================= */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
     padding: 40px;
     align-items: center;
-    gap: 30px;
-}
-
-
-.hero {
-    animation: fadeIn 1s ease;
 }
 
 .hero img {
@@ -103,29 +74,28 @@ main {
     border-radius: 10px;
 }
 
-.hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero-text p {
-    margin-bottom: 20px;
-}
-
 .hero-text button {
     padding: 10px 20px;
     background: #3498DB;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
 }
-
 
 .hero-text button:hover {
     background: #2980b9;
 }
 
+/* ================= SECTIONS ================= */
+section {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ================= DESTINATION ================= */
 #destinationBox img {
     width: 100%;
     max-width: 300px;
@@ -133,51 +103,7 @@ main {
     margin: 10px 0;
 }
 
-
-
-/* QUOTES */
-.quotes {
-    text-align: center;
-    padding: 30px;
-    font-size: 1.5rem;
-    color: #3498DB;
-}
-
-/* DESTINATION DAY */
-.destination-day {
-    padding: 30px;
-    text-align: center;
-}
-
-#destinationBox {
-    margin-top: 20px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* NEWSLETTER */
-.newsletter {
-    text-align: center;
-    padding: 30px;
-}
-
-.newsletter input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.newsletter button {
-    padding: 10px;
-    background: #3498DB;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-/* CONTROLS */
+/* ================= CONTROLS ================= */
 .controls {
     display: flex;
     justify-content: center;
@@ -185,14 +111,15 @@ main {
     margin: 20px;
 }
 
-.controls input, .controls select {
+.controls input,
+.controls select {
     padding: 10px;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
 #cardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -205,100 +132,19 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
 .card img {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 10px;
 }
 
-
-
-/* MODAL */
+/* ================= MODAL ================= */
 .modal {
     display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-    background: white;
-    margin: 10% auto;
-    padding: 20px;
-    max-width: 600px;
-    border-radius: 10px;
-    animation: fadeIn 0.3s ease;
-}
-
-#closeModal {
-    float: right;
-    cursor: pointer;
-}
-
-@keyframes fadeIn {
-    from {opacity:0; transform:scale(0.8);}
-    to {opacity:1; transform:scale(1);}
-}
-
-.random-form {
-    text-align: center;
-    padding: 20px;
-}
-
-.random-form select {
-    padding: 10px;
-    margin: 5px;
-}
-
-#randomResult {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.sounds button {
-    margin: 10px;
-    padding: 10px;
-}
-
-.tracker {
-    text-align: center;
-    padding: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input, form textarea {
-    margin: 5px;
-    padding: 10px;
-    width: 250px;
-}
-
-.faq-item p {
-    display: none;
-    padding: 10px;
-}
-
-#randomResult {
-    animation: fadeIn 0.5s ease;
-}
-
-img {
-    max-width: 100%;
-}
-
-.modal {
-    display: none;   /* ✅ IMPORTANT */
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
@@ -317,24 +163,25 @@ img {
     cursor: pointer;
 }
 
+/* ================= FORM & RESULTS ================= */
 .content-box {
     background: white;
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
-    margin: 40px auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 30px auto;
 }
 
-#resultBox, #randomResult {
+#resultBox,
+#randomResult {
     margin-top: 20px;
     padding: 20px;
     background: #ecf0f1;
     border-radius: 10px;
 }
 
+/* ================= BUTTON ================= */
 button {
-    margin-top: 10px;
     padding: 10px 20px;
     background: #3498DB;
     color: white;
@@ -347,12 +194,74 @@ button:hover {
     background: #2980b9;
 }
 
-.content-box {
-    animation: fadeIn 0.5s ease;
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
 }
 
+/* ================= IMAGES ================= */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= ANIMATION ================= */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+section,
+.content-box {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls input,
+    .controls select {
+        width: 90%;
+    }
+
+    #cardContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #2c3e50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+    }
+}
