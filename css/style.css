@@ -279,6 +279,13 @@ footer {
     }
 
 }
+ .menu-toggle {
+   display: none;
+   font-size: 24px;
+   color: white;
+   cursor: pointer;
+
+  }
 .nav-links {
   display: flex;
   gap: 20px;
@@ -286,6 +293,11 @@ footer {
 
 /* Mobile view */
 @media (max-width: 768px) {
+    
+  .menu-toggle {
+    display: block;
+  }
+
   .nav-links {
     display: none;  /* hidden by default */
     flex-direction: column;
@@ -300,10 +312,7 @@ footer {
     display: flex; /* show when active */
   }
 
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
+ 
 }
 
 /* Hide hamburger on desktop */
