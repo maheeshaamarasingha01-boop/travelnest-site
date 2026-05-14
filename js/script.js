@@ -48,11 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
             card.className = "card";
 
             card.innerHTML = `
-                ${d.image}
-                <h3>${d.name}</h3>
-                <p>${d.country}</p>
-            `;
-
+    <img src="${dest.image}" alt="${dest.name}">
+    <h3>${dest.name}</h3>
+    <p>${dest.country}</p>
+`;
             card.onclick = () => openModal(dest);
             container.appendChild(card);
         });
