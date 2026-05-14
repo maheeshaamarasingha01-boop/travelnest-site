@@ -279,3 +279,39 @@ footer {
     }
 
 }
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* hidden by default */
+    flex-direction: column;
+    background: #2c3e50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex; /* show when active */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

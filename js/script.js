@@ -258,3 +258,7 @@ function toggleFAQ(el) {
     const ans = el.nextElementSibling;
     ans.style.display = ans.style.display === "block" ? "none" : "block";
 }
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
