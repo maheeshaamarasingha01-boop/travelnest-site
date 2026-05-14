@@ -231,12 +231,16 @@ document.addEventListener("DOMContentLoaded", () => {
 function submitForm(e) {
     e.preventDefault();
 
-    const name = name.value;
-    const email = email.value;
-    const message = message.value;
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const messageField = document.getElementById("message");
+
+    const name = nameField.value;
+    const email = emailField.value;
+    const message = messageField.value;
 
     if (!name || !email || !message) {
-        alert("Fill all fields");
+        alert("Please fill all fields");
         return;
     }
 
@@ -244,10 +248,11 @@ function submitForm(e) {
     feedback.push({ name, email, message });
     localStorage.setItem("feedback", JSON.stringify(feedback));
 
-    confirmMsg.textContent = "✅ Message sent!";
-    document.querySelector("form").reset();
+    document.getElementById("confirmMsg").textContent = "✅ Message sent!";
 
+    e.target.reset(); // clears form
 }
+
 
 function toggleFAQ(el) {
     const ans = el.nextElementSibling;
