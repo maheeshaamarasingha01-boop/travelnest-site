@@ -319,7 +319,7 @@ footer {
 .menu-toggle {
   display: none;
 }
-.nav-container {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
