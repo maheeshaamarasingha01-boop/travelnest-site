@@ -52,11 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <h3>${d.name}</h3>
     <p>${d.country}</p>
 `;
-modalDetails.innerHTML = `
-    <h2>${dest.name}</h2>
-    <img src="${dest.image}" alt="${dest.name}">
-    <p>${dest.description}</p>
-`;
+
 
 
             card.onclick = () => openModal(dest);
