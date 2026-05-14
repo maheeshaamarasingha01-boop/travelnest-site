@@ -76,6 +76,12 @@ main {
     max-width: 1200px;
     margin: auto;
 }
+main {
+    padding: 20px;
+    background: #f0f4f8;
+    min-height: 80vh;
+}
+
 
 
 /* HERO */
@@ -310,3 +316,43 @@ img {
     float: right;
     cursor: pointer;
 }
+
+.content-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#resultBox, #randomResult {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ecf0f1;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.content-box {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
