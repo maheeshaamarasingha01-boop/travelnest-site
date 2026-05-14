@@ -238,4 +238,16 @@ footer {
     grid-template-columns: 1fr;
     padding: 30px;
   }
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;  /* smaller for mobile */
+}
+
+.hero img {
+  margin-top: 15px;
+}
 }
